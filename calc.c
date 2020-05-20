@@ -6,6 +6,7 @@ int main(){
 string calc[100];
 string num[100];
 string oper[100];
+int ans = 0;
 int k = 0;
 int j = 0;
 printf ("수식을 입력하세요 : ");
@@ -18,8 +19,9 @@ for(int i=0; i< strlen(calc); i++){
   else
     num[j] = calc[i];
 }
- 
-printf("결과는 : %d ", 
+  
+
+printf("결과는 : %d ", ans);
 }
 
 bool is_operator(string a){
