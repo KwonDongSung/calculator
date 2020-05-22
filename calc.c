@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-
+int calculate(*p,*q,int sth);
+bool is_operator(string a);
 int main(){
 string calc[100];
 string num[100];
@@ -19,8 +20,17 @@ for(int i=0; i< strlen(calc); i++){
   else
     num[j] = calc[i];
 }
+int n=0;
+int m=0;
+int nans=0;
+while(1){
+  nans = calculate(num[n],oper[m],ans);
+  n+=2;
+  m++;
+  ans = calculate(num[n],oper[m],nans);
+}
+ 
   
-
 printf("결과는 : %d ", ans);
 }
 
