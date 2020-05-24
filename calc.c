@@ -17,18 +17,21 @@ for(int i=0; i< strlen(calc); i++){
     oper[k] = calc[i];
     k++;
     }
-  else
+  else{
     num[j] = calc[i];
+    j++;
+  }
 }
-int n=0;
-int m=0;
-int nans=0;
-while(1){
-  nans = calculate(num[n],oper[m],ans);
-  n+=2;
-  m++;
-  ans = calculate(num[n],oper[m],nans);
-}
+ans = test(int num[0],oper[0],int num[1])
+//int n=0;
+//int m=0;
+//int nans=0;
+//while(1){
+//  nans = calculate(num[n],oper[m],ans);
+ // n+=2;
+ // m++;
+  //ans = calculate(num[n],oper[m],nans);
+//}
  
   
 printf("결과는 : %d ", ans);
@@ -38,4 +41,10 @@ bool is_operator(string a){
 if ((a == +) || (a == -) || (a == *) || (a == /))
   return true;
   else return false;
+}
+int test(int a, string b, int c){
+  if (b == "+") return a + c;
+  if (b == "-") return a - c;
+  if (b == "*") return a * c;
+  if (b == "/") return a / c;
 }
