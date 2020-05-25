@@ -22,7 +22,11 @@ for(int i=0; i< strlen(calc); i++){
     j++;
   }
 }
-ans = test(int num[0],oper[0],int num[1])
+int m = 0;
+for(int n = 0; n < strlen(calc); n++){
+  ans += test(int num[n],oper[m],int num[n+1]);
+  m++;
+}
 //int n=0;
 //int m=0;
 //int nans=0;
