@@ -23,8 +23,9 @@ for(int i=0; i< strlen(calc); i++){
   }
 }
 int m = 0;
-for(int n = 0; n < strlen(calc); n++){
-  ans += test(int num[n],oper[m],int num[n+1]);
+int sth = num[0];
+for(int n = 1; n < strlen(calc); n++){
+  sth = test(sth ,oper[m],int num[n]);
   m++;
 }
 //int n=0;
